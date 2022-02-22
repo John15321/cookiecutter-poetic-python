@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cookiecutter-poetic-python"
+version = "0.1.0"
+description = "A cookiecutter template for Python using the Poetry project manager"
+authors = ["Jan Bronicki <janbronicki@gmail.com>"]
+license = "MIT License"
+
+[tool.poetry.dependencies]
+# TODO: make it work for min 3.7
+python = "^3.8"
+cookiecutter = "^1.7.3"
+flake8 = "^4.0.1"
+
+[tool.poetry.dev-dependencies]
+tox = "^3.24.5"
+pytest = "^7.0.1"
+black = "^22.1.0"
+pylint = "^2.12.2"
+Sphinx = "^4.4.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+# isort --profile=black --line-length 79 .
