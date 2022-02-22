@@ -30,5 +30,10 @@
         "GitLab",
         "None"
     ],
-    "create_default_ci_configuration": ["y", "n"]
+    "create_default_ci_configuration": ["y", "n"],
+    "documentation_type": [
+        "Markdown (mkdocs) - easy, good for simply documentation",
+        "Sphinx (sphinx) - harder, good for complex documentation",
+        "None"
+    ]
 }
