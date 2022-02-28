@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+"""Basic tests on the package."""
+
 import os
 from pathlib import Path
 
@@ -20,4 +22,5 @@ def get_version() -> str:
     return str(toml.load(pyproject_file)["tool"]["poetry"]["version"])
 
 def test_version():
+    """Checks that package version matches ``__version__`` in ``__init__.py``."""
     assert __version__ == get_version()
