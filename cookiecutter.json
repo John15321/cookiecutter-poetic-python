@@ -1,39 +1,13 @@
 {
     "author_full_name": "Jan Bronicki",
     "author_email": "janbronicki@gmail.com",
+    "github_nickname": "John15321",
     "project_full_name": "Hello World",
     "project_slug": "{{ cookiecutter.project_full_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_short_description": "Prints out Hello World!",
     "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
-    "publish_registry": "crates.io",
-    "crate_type": [
-        "Application",
-        "Library",
-        "Testing repository"
-    ],
-    "command_line_interface": ["None", "Argparse", "Click"],
-    "minimal_python_version": [
-        "3.7",
-        "3.8",
-        "3.9",
-        "3.10"
-    ],
+    "python_versions_supported": ">=3.7, <=3.10",
     "starting_version": "0.1.0",
-    "default_git_branch": [
-        "main",
-        "master",
-        "None"
-    ],
     "add_precommit_configuration": ["y", "n"],
-    "target_git_platform": [
-        "GitHub",
-        "GitLab",
-        "None"
-    ],
-    "create_default_ci_configuration": ["y", "n"],
-    "documentation_type": [
-        "Markdown (mkdocs) - easy, good for simply documentation",
-        "Sphinx (sphinx) - harder, good for complex documentation",
-        "None"
-    ]
+    "create_default_ci_configuration": ["y", "n"]
 }
