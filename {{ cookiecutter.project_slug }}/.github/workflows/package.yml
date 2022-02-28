@@ -1,3 +1,4 @@
+{% raw %}
 name: Check that the package builds and deps install
 on: [push]
 jobs:
@@ -18,3 +19,4 @@ jobs:
     - name: Run tox package on python ${{ matrix.python-version }}
       run: |
         tox -e package
+{% endraw %}
