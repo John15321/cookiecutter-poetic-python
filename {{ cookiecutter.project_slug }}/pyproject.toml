@@ -8,10 +8,9 @@ authors = ["{{ cookiecutter.author_full_name }} <{{ cookiecutter.author_email }}
 python = "{{ cookiecutter.python_versions_supported }}"
 
 [tool.poetry.dev-dependencies]
-flake8 = "*"
 tox = "*"
+flake8 = "*"
 black = "*"
-mkdocs = "*"
 pylint = "*"
 pytest = "*"
 isort = "*"

@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 """Basic tests on the package."""
-
-import os
-from pathlib import Path
-
 import toml
 
 from {{ cookiecutter.project_slug }} import __version__
@@ -16,12 +12,8 @@ def get_version() -> str:
     --------
         Pcakge version.
     """
-    Path(os.path.dirname(__file__))
     root_project_directory = "../"
-
-    # TODO: fix this so it works in a way that it just knows were the
-    # toml file is
-    pyproject_file: Path = root_project_directory + "pyproject.toml"
+    pyproject_file = root_project_directory + "pyproject.toml"
 
     return str(toml.load(pyproject_file)["tool"]["poetry"]["version"])
 
