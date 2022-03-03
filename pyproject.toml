@@ -10,7 +10,7 @@ license = "MIT License"
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^4.0.1"
+flake8 = "*"
 tox = "^3.24.5"
 black = "^22.1.0"
 mkdocs = "^1.2.3"
@@ -18,6 +18,9 @@ pylint = "^2.12.2"
 pytest = "^7.0.1"
 isort = "^5.10.1"
 cookiecutter = "^1.7.3"
+Sphinx = "*"
+sphinx-rtd-theme = "^1.0.0"
+toml = "^0.10.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

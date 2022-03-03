@@ -19,19 +19,19 @@ from pathlib import Path
 import toml
 
 current_directory = Path(os.path.dirname(__file__))
-# TODO: add if else for that  root_project_directory = "../"
-root_project_directory = "../../"
+# : add if else for that  root_project_directory = "../"
+root_project_directory = "../"
 
 pyproject_file: Path = root_project_directory + "pyproject.toml"
 
 pyproject_version = toml.load(pyproject_file)["tool"]["poetry"]["version"]
-# TODO: make it all authors nicely
+# : make it all authors nicely
 pyproject_authors = str(toml.load(pyproject_file)["tool"]["poetry"]["authors"][0])
 
 # -- Project information -----------------------------------------------------
 
 project = "{{ cookiecutter.project_slug }}"
-# TODO: Template that in the cookiecutter tempalte
+# : Template that in the cookiecutter tempalte
 copyright = f"{% now 'local', '%Y' %}, {pyproject_authors}"
 author = pyproject_authors
 
