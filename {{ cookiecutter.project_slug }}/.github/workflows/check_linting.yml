@@ -20,6 +20,7 @@ jobs:
       run: pip install tox
     - name: Run tox pylint and flake8 on python ${{ matrix.python-version }}
       run: |
-        tox -e pylint
         tox -e flake8
+        tox -e mypy
+        tox -e pylint
 {% endraw %}
