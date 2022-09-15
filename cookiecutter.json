@@ -6,8 +6,9 @@
     "project_slug": "{{ cookiecutter.project_full_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_short_description": "Prints out Hello World!",
     "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
-    "python_versions_supported": ">=3.7, <=3.10",
+    "python_versions_supported": "^3.8",
     "starting_version": "0.1.0",
     "add_precommit_configuration": ["y", "n"],
-    "create_default_ci_configuration": ["y", "n"]
+    "create_default_ci_configuration": ["y", "n"],
+    "project_url": "https://url.to.the.projects.main.website.com"
 }

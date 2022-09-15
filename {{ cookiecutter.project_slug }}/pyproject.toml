@@ -7,19 +7,6 @@ authors = ["{{ cookiecutter.author_full_name }} <{{ cookiecutter.author_email }}
 [tool.poetry.dependencies]
 python = "{{ cookiecutter.python_versions_supported }}"
 
-[tool.poetry.dev-dependencies]
-tox = "*"
-flake8 = "*"
-black = "*"
-pylint = "*"
-pytest = "*"
-isort = "*"
-cookiecutter = "*"
-Sphinx = "*"
-sphinx-rtd-theme = "*"
-toml = "*"
-types-all="*"
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

@@ -1,20 +1,24 @@
-.. {{ cookiecutter.project_slug }} documentation master file, created by
-   sphinx-quickstart.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. sidebar:: {{ cookiecutter.project_full_name }}
 
-Welcome to {{ cookiecutter.project_slug }}'s documentation!
-=======================================
+    .. figure:: _static/logo.png
+        :figwidth: 200px
+        :align: center
+
+    :Author: `{{ cookiecutter.author_full_name }} <{{ cookiecutter.author_email }}>`_
+    :License: ${{ cookiecutter.open_source_license }}
+    :Copyright: ${{ cookiecutter.open_source_license }}
+
+.. include:: ../README.rst
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 5
+    :hidden:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    Home <self>
+    getting_started
+    user_manual/index
+    design/index
+    api
+    autogen/modules
+    changes
+    appendix/index
