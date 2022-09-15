@@ -1,17 +1,17 @@
 {% raw %}
-name: 🧪 Tests
+name: 🔨 Install dependencies
 on:
     pull_request:
     push:
         branches: ["main", "develop", "release"]
 
 jobs:
-    test:
+    build:
         strategy:
           matrix:
             os: [ubuntu-latest, windows-latest, macos-latest]
             python-version: ["3.8", "3.9", "3.10"]
-        name: 🧪 Run tests
+        name: 🔨 Install dependencies
         runs-on: ${{ matrix.os }}
         steps:
             - uses: actions/checkout@v2
@@ -27,6 +27,6 @@ jobs:
                 virtualenvs-in-project: false
                 installer-parallel: true
             - name: Run tests
-              run: tox -e test
+              run: tox -e install
 
 {% endraw %}

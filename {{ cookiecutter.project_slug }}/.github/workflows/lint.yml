@@ -1,18 +1,17 @@
 {% raw %}
-name: 🧪 Tests
+name: 🖋 Check linting
 on:
     pull_request:
     push:
         branches: ["main", "develop", "release"]
 
 jobs:
-    test:
+    lint:
         strategy:
           matrix:
-            os: [ubuntu-latest, windows-latest, macos-latest]
             python-version: ["3.8", "3.9", "3.10"]
-        name: 🧪 Run tests
-        runs-on: ${{ matrix.os }}
+        name: 🖋 Check linting
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
             - name: Install Python ${{ matrix.python-version }}
@@ -27,6 +26,6 @@ jobs:
                 virtualenvs-in-project: false
                 installer-parallel: true
             - name: Run tests
-              run: tox -e test
+              run: tox -e lint
 
 {% endraw %}

@@ -1,20 +1,12 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+### Description
 
----
+<!-- Delete these comments later -->
+<!-- Put the description of the task here -->
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+### Checklist
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+<!-- Don't delete these, check them with a mouse if completed -->
+* [ ] Add tests, documentation, update the changelog, etc.
+* [ ] Connect all issues, and project boards, add labels, assign people to the PR and the issue, etc.
+* [ ] Make sure that the PR description and title contain "Draft: " at the beginning if its not yet ready
+* [ ] Make sure that this template is properly filled in and appropriate parts deleted

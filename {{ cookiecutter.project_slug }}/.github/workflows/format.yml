@@ -1,0 +1,53 @@
+{% raw %}
+name: 👔 Check formatting
+on:
+    pull_request:
+    push:
+        branches: ["main", "develop", "release"]
+
+jobs:
+    lint:
+        strategy:
+          matrix:
+            python-version: ["3.10"]
+        name: 👔 Check formatting
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Install Python ${{ matrix.python-version }}
+            - uses: actions/setup-python@v4
+              with:
+                python-version: "${{ matrix.python-version }}" 
+            - name: Install and configure Poetry
+              uses: snok/install-poetry@v1
+              with:
+                version: 1.2
+                virtualenvs-create: true
+                virtualenvs-in-project: false
+                installer-parallel: true
+            - name: Run tests
+              run: tox -e check_format
+    check_format_markdown:
+        name: 🖋 Check markdown files
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+            - name: Markdown Linting Action
+              uses: avto-dev/markdown-lint@v1.5.0
+              with:
+                  args: "*.md"
+    check_format_toml:
+        name: 🪦 Check toml files
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+            - uses: actions-rs/toolchain@v1
+              with:
+                  toolchain: stable
+                  override: true
+            - uses: davidB/rust-cargo-make@v1
+            - run: cargo make toml-fmt-check
+
+{% endraw %}
