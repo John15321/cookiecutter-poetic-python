@@ -157,3 +157,13 @@ cython_debug/
 
 # PyCharm
 .idea/
+
+# macOS
+.DS_Store
+
+# Docs
+docs/build/
+docs/source/_build/
+
+# Test reports
+*junit-test*

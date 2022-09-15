@@ -5,8 +5,8 @@
         :align: center
 
     :Author: `{{ cookiecutter.author_full_name }} <{{ cookiecutter.author_email }}>`_
-    :License: ${{ cookiecutter.open_source_license }}
-    :Copyright: ${{ cookiecutter.open_source_license }}
+    :License: {{ cookiecutter.open_source_license }}
+    :Copyright: {{ cookiecutter.open_source_license }}
 
 .. include:: ../README.rst
 
