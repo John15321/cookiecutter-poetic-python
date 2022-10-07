@@ -1,4 +1,4 @@
-Sample Project
+{{ cookiecutter.project_full_name }}
 ==============
 
 Credits
