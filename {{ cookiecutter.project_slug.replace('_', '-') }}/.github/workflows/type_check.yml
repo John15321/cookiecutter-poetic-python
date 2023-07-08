@@ -1,15 +1,16 @@
 {% raw %}
-name: 👔 Check formatting
+name: 🏗️ Static Type Checking
 on:
     pull_request:
 
 jobs:
-    lint:
+    test:
         strategy:
             matrix:
-                python-version: ["3.11"] # Should be the newest version supported
-        name: 👔 Check formatting
-        runs-on: ubuntu-latest
+                os: [ubuntu-latest]
+                python-version: ["3.9"] # Should be the lowest supported version
+        name: 🏗️ Run Static Type Checking
+        runs-on: ${{ matrix.os }}
         steps:
             - name: Checkout repository code
               uses: actions/checkout@v2
@@ -17,9 +18,9 @@ jobs:
               uses: actions/setup-python@v4
               with:
                   python-version: "${{ matrix.python-version }}"
-            - name: Check formatting
+            - name: Run Static Type Checking
               run: |
                   pip install tox poetry
-                  tox -e check_format
+                  tox -e type_checking
 
 {% endraw %}

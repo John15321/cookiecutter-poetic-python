@@ -4,7 +4,7 @@ A `Cookiecutter` project template that uses Poetry to manage Python Projects
 
 ## Getting started
 
-*WARNING* This template requires Poetry equal `1.2.0` or newer due to the use of dependency groups, and Python at least `3.8`.
+*WARNING* This template requires Poetry equal `1.5.2` or newer due to the use of dependency groups, and Python at least `3.9`.
 
 Install `cookiecutter`:
 

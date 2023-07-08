@@ -1,2 +1,6 @@
 """Package version."""
-__version__ = "{{ cookiecutter.starting_version }}"
+# Dont touch anything here
+
+import importlib.metadata
+
+__version__ = importlib.metadata.version(__package__)

@@ -55,7 +55,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-*junit*
 
 # Translations
 *.mo
@@ -165,3 +164,18 @@ cython_debug/
 # Docs
 docs/build/
 docs/source/_build/
+docs/autogen/
+
+# PyTest
+*junit*
+
+# Docker
+compose-dev.yaml
+
+# Ignore jupyter notebooks
+*.ipynb
+
+# NPM/Node stuff
+node_modules/
+package-lock.json
+package.json

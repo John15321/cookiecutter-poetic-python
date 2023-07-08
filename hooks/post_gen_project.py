@@ -5,9 +5,12 @@ deps = {
     "dev": ["tox"],
     "type_check": ["mypy", "types-all"],
     "test": ["pytest", "pytest-mock", "pytest-cov", "toml"],
-    "docs": ["sphinx", "sphinx-autorun", "sphinx-rtd-theme"],
     "lint": ["pylint", "pytest"],
 }
+
+print(
+    "Adding newest versions of dependencies to the project (this may take a while)..."
+)
 
 for k in deps:
     deps_str = ""
@@ -15,4 +18,8 @@ for k in deps:
         deps_str += f" {d}"
     os.system(f"poetry add {deps_str} --group {k}")
 
+print("Done adding dependencies. Calculating the lock...")
+
 os.system("poetry lock")
+
+print("Done")
