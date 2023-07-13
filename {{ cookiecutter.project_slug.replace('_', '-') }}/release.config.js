@@ -27,7 +27,7 @@ const config = {
     [
       "@semantic-release/git",
       {
-        "assets": ["CHANGELOG.md"],
+        "assets": ["CHANGELOG.md", "pyproject.toml"],
         "message": "chore(Release 🚀): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       }
     ]
