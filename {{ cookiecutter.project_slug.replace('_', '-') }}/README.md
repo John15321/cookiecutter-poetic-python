@@ -1,6 +1,5 @@
 [![semantic-release](https://img.shields.io/badge/semantic--release-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-
 # {{ cookiecutter.project_full_name }}
 
 {{ cookiecutter.project_short_description }}
@@ -18,15 +17,21 @@ python -m venv venv
 source ./venv/bin/activate
 ```
 
+or
+
+```bash
+poetry shell
+```
+
 Install [Poetry](https://python-poetry.org/), its a project management tool, its used during the development to among many things build the package, install and manage dependencies. On the official website there are multiple ways of installing it but the easiest one is to simply install it in your venv with pip:
 
-```
+```bash
 pip install poetry
 ```
 
 Now you can install crucial dependencies. This command will install both package dependencies and development dependencies like `tox` (its similar to a Makefile but for Python), that will also install the package itself in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html).
 
-```
+```bash
 poetry install
 ```
 
@@ -54,13 +59,13 @@ In the `tox.ini` file there a many jobs defined that perform tests, check format
 
 Usage of any of those command is very simple, we simply run tox and specify the environment:
 
-```
+```bash
 tox -e lint
 ```
 
 If you want to run the main ones all at once simply run:
 
-```
+```bash
 tox
 ```
 
@@ -86,9 +91,9 @@ Here is the exact enforced regular expression:
 
 Allowed types of conventional commits:
 
-- `fix`: a commit that fixes a bug in Uno.
-- `feat`: a commit that adds new functionality to Uno.
-- `docs`: a commit that adds or improves Uno's documentation.
+- `fix`: a commit that fixes a bug.
+- `feat`: a commit that adds new functionality.
+- `docs`: a commit that adds or improves documentation.
 - `test`: a commit that adds unit tests.
 - `perf`: a commit that improves performance, without functional changes.
 - `ci`: a commit that adds or improves the CI configuration.
