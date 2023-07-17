@@ -19,5 +19,4 @@ jobs:
             echo "Error: The PR title does not match the required format. Please update the title in the format: 'feat(ABC-123): Adds /get api response' or 'fix(MINOR): Fix typo in the CI' or 'fix(#12345): Fix memory leak'"
             exit 1
           fi
-
 {% endraw %}

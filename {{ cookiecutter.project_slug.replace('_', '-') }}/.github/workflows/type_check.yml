@@ -1,5 +1,5 @@
 {% raw %}
-name: 🏗️ Static Type Checking
+name: 🦺  Static Type Checking
 on:
     pull_request:
 
@@ -9,7 +9,7 @@ jobs:
             matrix:
                 os: [ubuntu-latest]
                 python-version: ["3.9"] # Should be the lowest supported version
-        name: 🏗️ Run Static Type Checking
+        name: 🦺 Run Static Type Checking
         runs-on: ${{ matrix.os }}
         steps:
             - name: Checkout repository code
@@ -38,6 +38,5 @@ jobs:
                 path: |
                   .tox
                 key: ${{ runner.os }}-${{ matrix.python-version }}-tox-typecheck
-
 
 {% endraw %}

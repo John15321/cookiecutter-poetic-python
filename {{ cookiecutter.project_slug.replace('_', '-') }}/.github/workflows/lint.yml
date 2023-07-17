@@ -25,7 +25,7 @@ jobs:
               with:
                 path: |
                   .tox
-                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-lint
+                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-lint-${{ hashFiles('**/poetry.lock') }}
             - name: Check linting
               run: |
                   pip install tox poetry
@@ -36,8 +36,5 @@ jobs:
               with:
                 path: |
                   .tox
-                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-lint
-
-
-
+                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-lint-${{ hashFiles('**/poetry.lock') }}
 {% endraw %}

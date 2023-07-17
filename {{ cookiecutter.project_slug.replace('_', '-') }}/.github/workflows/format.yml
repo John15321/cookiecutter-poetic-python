@@ -25,7 +25,7 @@ jobs:
               with:
                 path: |
                   .tox
-                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-format
+                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-format-${{ hashFiles('**/poetry.lock') }}
             - name: Check formatting
               run: |
                   pip install tox poetry
@@ -36,7 +36,5 @@ jobs:
               with:
                 path: |
                   .tox
-                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-format
-
-
+                key: ${{ runner.os }}-${{ matrix.python-version }}-tox-format-${{ hashFiles('**/poetry.lock') }}
 {% endraw %}
