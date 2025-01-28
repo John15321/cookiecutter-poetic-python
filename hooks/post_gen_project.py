@@ -3,7 +3,7 @@ import os
 deps = {
     "format": ["black", "isort"],
     "dev": ["tox"],
-    "type_check": ["mypy", "types-all"],
+    "type_check": ["mypy"],
     "test": ["pytest", "pytest-mock", "pytest-cov", "toml"],
     "lint": ["pylint", "pytest"],
 }
