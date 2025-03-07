@@ -1,4 +1,5 @@
 """Package version."""
+
 # Dont touch anything here
 
 import importlib.metadata
